@@ -1,0 +1,23 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor and workspace files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Do not commit exported event logs unless intentionally sanitized
+*.evtx
+
+# Do not commit credentials, notes, or private lab details
+.env
+credentials.txt
+secrets.txt
+notes-private.md
