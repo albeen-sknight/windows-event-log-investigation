@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-This repository documents a hands-on Windows Event Log investigation completed in a controlled Hack The Box Academy lab environment. The goal of the lab was to investigate Windows Security logs, correlate related events using a shared Logon ID, and identify the executable responsible for modifying auditing settings on a Windows system.
+This repository documents a hands-on Windows Event Log investigation completed in a controlled Hack The Box Academy lab environment. The investigation was performed from **Hack The Box Pwnbox**, a browser-based Linux environment connected to the HTB lab network.
+
+The goal of the lab was to investigate Windows Security logs, correlate related events using a shared Logon ID, and identify the executable responsible for modifying auditing settings on a Windows system.
 
 This project is written as a portfolio-style SOC analyst investigation. It focuses on the process: identifying the starting event, extracting a useful pivot field, building XML filters, reviewing related events, and documenting the final finding.
 
@@ -24,8 +26,8 @@ The investigation required answering two main questions:
 ## Tools and Environment
 
 - Hack The Box Academy lab environment
-- Pwnbox
-- Remote Desktop Protocol / RDP
+- Hack The Box Pwnbox
+- RDP connection from Pwnbox to the Windows lab target
 - Windows Event Viewer
 - Windows Security Logs
 - Manual XML filtering
@@ -61,6 +63,8 @@ The investigation required answering two main questions:
 ---
 
 ## Investigation Methodology
+
+The investigation began inside HTB Pwnbox. From Pwnbox, an RDP session was opened to the Windows lab target. Windows Event Viewer was then used on the target system to inspect Security logs and build XML filters.
 
 The investigation followed a SOC-style workflow:
 
@@ -181,15 +185,15 @@ screenshot-19.png
 
 ---
 
-### 2. Pwnbox environment ready
+### 2. HTB Pwnbox environment ready
 
-![Screenshot 02 - Pwnbox environment](assets/screenshot-02.png)
+![Screenshot 02 - HTB Pwnbox environment](assets/screenshot-02.png)
 
 ---
 
-### 3. RDP connection to the Windows lab machine
+### 3. RDP connection from Pwnbox to the Windows lab target
 
-![Screenshot 03 - RDP connection](assets/screenshot-03.png)
+![Screenshot 03 - RDP connection from Pwnbox](assets/screenshot-03.png)
 
 ---
 
@@ -349,6 +353,8 @@ This project demonstrates practical blue-team investigation skills relevant to S
 
 ### Skills Demonstrated
 
+- Hack The Box Pwnbox lab workflow
+- RDP access from a controlled lab environment
 - Windows Event Viewer usage
 - Windows Security Log analysis
 - Event ID correlation
@@ -379,10 +385,10 @@ windows-event-log-investigation/
 
 ## Disclaimer
 
-This repository is for educational and portfolio purposes only. The investigation was performed in an authorized lab environment. No real-world systems were targeted, and sensitive lab access details have been removed.
+This repository is for educational and portfolio purposes only. The investigation was performed in an authorized lab environment through HTB Pwnbox. No real-world systems were targeted, and sensitive lab access details have been removed.
 
 ---
 
 ## Tags
 
-`Windows Event Logs` `SOC Analyst` `SIEM` `Blue Team` `Event Viewer` `Incident Investigation` `Threat Hunting` `Cybersecurity Lab` `Hack The Box` `Log Analysis`
+`Windows Event Logs` `SOC Analyst` `SIEM` `Blue Team` `Event Viewer` `Incident Investigation` `Threat Hunting` `Cybersecurity Lab` `Hack The Box` `Pwnbox` `Log Analysis`
